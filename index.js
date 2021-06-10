@@ -214,22 +214,6 @@ Use the getRandomFlavors function and new arrays below to do the following:
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
-
-function getRandomFlavors(flavors1,flavors2,flavors3,flavors4){
-/*    let combinedFlavors = [...flavors1,...flavors2,...flavors3,...flavors4]
-    //let newFlavors = []
-    //let randomNum = 0;
-
-    for (let i=0; i < 32; i++) {
-        randomNum = Math.round(Math.random()*combinedFlavors.length)
-        newFlavors.push(combinedFlavors[randomNum])
-        combinedFlavors.splice[randomNum,1]
-    }
-    return combinedFlavors;*/
-}
-
-//console.log("stretch 2 "+ getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors))
-
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
     "Date night",
@@ -310,6 +294,21 @@ const regionalFlavors = [
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"
 ]
+
+function getRandomFlavors(flavors1,flavors2,flavors3,flavors4){
+    let combinedFlavors = [...flavors1,...flavors2,...flavors3,...flavors4]
+    let newFlavors = []
+    let randomNum = 0;
+
+    for (let i=0; i < 31; i++) {
+        randomNum = Math.round(Math.random()*combinedFlavors.length)
+        newFlavors.push(combinedFlavors[randomNum])
+        combinedFlavors.splice[randomNum,1]
+    }
+    return newFlavors;
+}
+
+console.log("stretch 2 ", getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors))
 
 
 
